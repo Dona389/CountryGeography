@@ -10,8 +10,7 @@
 		4E32F91FBD29145B23B3DBE9 /* Pods_CountryGeographyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3EC681891950D5BF91A95E /* Pods_CountryGeographyTests.framework */; };
 		686C325324BEDB98009BBF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C325224BEDB98009BBF85 /* AppDelegate.swift */; };
 		686C325524BEDB98009BBF85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C325424BEDB98009BBF85 /* SceneDelegate.swift */; };
-		686C325724BEDB98009BBF85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C325624BEDB98009BBF85 /* ViewController.swift */; };
-		686C325A24BEDB98009BBF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C325824BEDB98009BBF85 /* Main.storyboard */; };
+		686C325724BEDB98009BBF85 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C325624BEDB98009BBF85 /* CountryDetailsViewController.swift */; };
 		686C325D24BEDB98009BBF85 /* CountryGeography.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 686C325B24BEDB98009BBF85 /* CountryGeography.xcdatamodeld */; };
 		686C325F24BEDB9E009BBF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686C325E24BEDB9E009BBF85 /* Assets.xcassets */; };
 		686C326224BEDB9E009BBF85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C326024BEDB9E009BBF85 /* LaunchScreen.storyboard */; };
@@ -45,8 +44,7 @@
 		686C324F24BEDB98009BBF85 /* CountryGeography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryGeography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686C325224BEDB98009BBF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686C325424BEDB98009BBF85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		686C325624BEDB98009BBF85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		686C325924BEDB98009BBF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		686C325624BEDB98009BBF85 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		686C325C24BEDB98009BBF85 /* CountryGeography.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountryGeography.xcdatamodel; sourceTree = "<group>"; };
 		686C325E24BEDB9E009BBF85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686C326124BEDB9E009BBF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,8 +128,7 @@
 			children = (
 				686C325224BEDB98009BBF85 /* AppDelegate.swift */,
 				686C325424BEDB98009BBF85 /* SceneDelegate.swift */,
-				686C325624BEDB98009BBF85 /* ViewController.swift */,
-				686C325824BEDB98009BBF85 /* Main.storyboard */,
+				686C325624BEDB98009BBF85 /* CountryDetailsViewController.swift */,
 				686C325E24BEDB9E009BBF85 /* Assets.xcassets */,
 				686C326024BEDB9E009BBF85 /* LaunchScreen.storyboard */,
 				686C326324BEDB9E009BBF85 /* Info.plist */,
@@ -168,7 +165,6 @@
 				7E2A05130070206CB5A5C22A /* Pods-CountryGeographyTests.debug.xcconfig */,
 				771C3607B639CCDF7C8DBF1B /* Pods-CountryGeographyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,7 +277,6 @@
 			files = (
 				686C326224BEDB9E009BBF85 /* LaunchScreen.storyboard in Resources */,
 				686C325F24BEDB9E009BBF85 /* Assets.xcassets in Resources */,
-				686C325A24BEDB98009BBF85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686C325724BEDB98009BBF85 /* ViewController.swift in Sources */,
+				686C325724BEDB98009BBF85 /* CountryDetailsViewController.swift in Sources */,
 				686C325324BEDB98009BBF85 /* AppDelegate.swift in Sources */,
 				686C325524BEDB98009BBF85 /* SceneDelegate.swift in Sources */,
 				686C325D24BEDB98009BBF85 /* CountryGeography.xcdatamodeld in Sources */,
@@ -414,14 +409,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		686C325824BEDB98009BBF85 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				686C325924BEDB98009BBF85 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		686C326024BEDB9E009BBF85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
