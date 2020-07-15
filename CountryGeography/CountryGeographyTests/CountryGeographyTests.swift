@@ -9,10 +9,11 @@
 import XCTest
 @testable import CountryGeography
 
-class CountryGeographyTests: XCTestCase {
-
+class CountryGeographyTests: XCTestCase, ViewModelDelegate {
+    private var countryDetailsRestServiceManager: CountryDetailsRestServiceManager!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        countryDetailsRestServiceManager = CountryDetailsRestServiceManager()
     }
 
     override func tearDownWithError() throws {
@@ -30,5 +31,29 @@ class CountryGeographyTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testGetCountryInfo() {
+        // 1. Create expectation
+        let expectation = self.expectation(description: "Getting country details from server")
+        countryDetailsRestServiceManager.getCountryInfo(completion: { _ in
+            // 2. Signal
+            expectation.fulfill()
+        })
+
+        // 4. Assert
+            waitForExpectations(timeout: 5) { error in
+             if let error = error {
+                 XCTFail("waitForExpectationsWithTimeout error: \(error)")
+             }
+         }
+    }
+    func testFetchData() {
+        let countryDetailsViewModelType = CountryDetailsViewModel(dataSource: CountryDetailsDataSource())
+        countryDetailsViewModelType.getCountryDetails()
+    }
+    func willLoadData() {
+    }
+    func didLoadData() {
+    }
 
 }
+
